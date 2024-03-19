@@ -27,7 +27,7 @@ public class NewsDAO extends AbstractDAO<NewsModel> implements INewsDAO {
 
 	@Override
 	public Long save(NewsModel newsModel) {
-		//dung String cung duoc
+		// dung String cung duoc
 		StringBuilder sql = new StringBuilder(
 				"INSERT INTO news(title, content, thumbnail, shortdescription, categoryid, createddate, createdby) VALUES (?,?,?,?,?,?,?)");
 		return insert(sql.toString(), newsModel.getTitle(), newsModel.getContent(), newsModel.getThumbnail(),
