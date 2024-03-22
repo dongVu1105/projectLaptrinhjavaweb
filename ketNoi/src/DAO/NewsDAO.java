@@ -20,7 +20,7 @@ public class NewsDAO extends AbstractDAO<NewsModel> implements INewsDAO {
 
 	@Override
 	public List<NewsModel> findByCategoryId(Long categoryId) {
-		String sql = "SELECT * FROM news WHERE id = ?";
+		String sql = "SELECT * FROM news WHERE categoryid = ?";
 		List<NewsModel> news = query(sql, new NewsMapper(), categoryId);
 		return news;
 	}
